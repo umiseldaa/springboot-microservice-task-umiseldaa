@@ -1,0 +1,165 @@
+{
+  "info": {
+    "_postman_id": "c18eaf4d-8a62-4093-94ac-a5693f6a20d7",
+    "name": "MegaSyariah",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36817207"
+  },
+  "item": [
+    {
+      "name": "addBook",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"The Alchemist\",\r\n    \"author\": \"Paulo Coelho\",\r\n    \"isbn\": 456,\r\n    \"publishedDate\": \"2026-10-10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9021/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9021",
+          "path": [
+            "api",
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAll",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9021/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9021",
+          "path": [
+            "api",
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9021/api/books/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9021",
+          "path": [
+            "api",
+            "books",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Aku\",\r\n    \"author\": \"Tere Liye\",\r\n    \"isbn\": 120,\r\n    \"publishedDate\": \"2024-10-09\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9021/api/books/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9021",
+          "path": [
+            "api",
+            "books",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updatePartial",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Pergiiii\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9021/api/books/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9021",
+          "path": [
+            "api",
+            "books",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteBook",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Pergi\",\r\n    \"author\": \"Tere Liye\",\r\n    \"isbn\": 124,\r\n    \"publishedDate\": \"2026-10-09\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9021/api/books/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9021",
+          "path": [
+            "api",
+            "books",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
