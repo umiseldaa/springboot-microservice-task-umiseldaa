@@ -13,7 +13,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"title\": \"The Alchemist\",\r\n    \"author\": \"Paulo Coelho\",\r\n    \"isbn\": 456,\r\n    \"publishedDate\": \"2026-10-10\"\r\n}",
+          "raw": "{\r\n    \"title\": \"The Alchemist\",\r\n    \"author\": \"Paulo Coelho\",\r\n    \"isbn\": \"111-222\",\r\n    \"publishedDate\": \"2026-10-10\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -61,7 +61,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:9021/api/books/1",
+          "raw": "http://localhost:9021/api/books/3",
           "protocol": "http",
           "host": [
             "localhost"
@@ -70,7 +70,7 @@
           "path": [
             "api",
             "books",
-            "1"
+            "3"
           ]
         }
       },
@@ -83,7 +83,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"title\": \"Aku\",\r\n    \"author\": \"Tere Liye\",\r\n    \"isbn\": 120,\r\n    \"publishedDate\": \"2024-10-09\"\r\n}",
+          "raw": "{\r\n    \"title\": \"Matahari\",\r\n    \"author\": \"Tere Liye\",\r\n    \"isbn\": \"123-444\",\r\n    \"publishedDate\": \"2024-10-09\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -113,7 +113,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"title\": \"Pergiiii\"\r\n}",
+          "raw": "{\r\n    \"title\": \"Hujan\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
