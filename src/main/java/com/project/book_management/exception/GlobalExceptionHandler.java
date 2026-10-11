@@ -54,16 +54,17 @@ public class GlobalExceptionHandler {
 
     // wrong type in path var or req param
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-    public ResponseEntity<ApiResponse<Object>> handleInvalidPayload(MethodArgumentTypeMismatchException ex) {
+    public ResponseEntity<ApiResponse<Object>> handleTypeMismatch(MethodArgumentTypeMismatchException ex) {
         log.warn("Invalid type of value for parameter '{}'", ex.getName());
         return build(HttpStatus.BAD_REQUEST, "Invalid type of value for parameter '"+ex.getName()+"'");
     }
 
     // other
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiResponse<Object>> handleTypeMismatch(Exception ex) {
+    public ResponseEntity<ApiResponse<Object>> handleGeneralError(Exception ex) {
+        // Keep Spring's original status code for known errors (e.g. 404, 405)
         if (ex instanceof ErrorResponse errorResponse) {
-            log.warn("Request error: {}", ex.getMessage());
+            log.warn("Error: {}", ex.getMessage());
             return build(errorResponse.getStatusCode(), errorResponse.getBody().getDetail());
         }
         log.error("An unexpected error occurred: \n", ex);
